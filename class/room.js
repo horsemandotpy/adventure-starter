@@ -44,12 +44,17 @@ class Room {
     }
 
     getItemByName(name) {
-
-        // Fill this in
+        const items = this.items;
+        const itemArr = items.filter((item) => {
+            if (item.name === name) {
+                return item
+            }
+        })[0]
+        return itemArr;
     }
 
 }
 
 module.exports = {
-  Room,
+    Room,
 };
